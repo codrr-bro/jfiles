@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<body>
+<h2>Regitration Form</h2>
+
+<form onsubmit="return validateForm()">
+Name: <br>
+<input type="text", id="name"><br><br>
+Email:<br>
+<input type="text" id="email"><br><br>
+Phone: <br>
+<input type="text", id="phone"><br><br>
+Password:<br>
+<input type="password" id="password"><br><br>
+Confirm Password:<br>
+<input type="password" id="pasword"><br><br>
+<input type="submit" value="Register">
+</form>
+
+<script>
+ function validateForm(){
+ var name = document.getElementById("name").value;
+ var email = document.getElementById("email").value;
+ var phone = document.getElementById("phone").value;
+ var password = document.getElementById("password").value;
+ var confirm = document.getElementById("confirm").value;
+
+if(name == "" || email == "" || phone == "" || password == "" || confirm == "")
+{
+ alert("All fields are required!");
+ return false;
+}
+if (!email.includes("@") || !email.includes(".")) {
+   alert("Enter a valid email ");
+   return false;
+   }
+if (phone.length !=10 || isNaN(phone)) {
+   alert("Enter a valid 10 digit number!");
+   return false;
+   }
+if (password.length != 10
+   alert("Password must be atleast 6 characters! ");
+   return false;
+   }
+if (password != confirm) {
+   alert("Passwords are not match! ");
+   return false;
+   }
+if (password.length < 6) {
+   alert("Password must be atleast 6 characters!");
+   return false;
+   }
+alert("Registration Succesfull!");
+return true;
+}
+</script>
+</body>
+</html>

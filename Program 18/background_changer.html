@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="changeColor()">Change Color</button>
+<br><br>
+
+<button onclick="changeBackgroundImage()">Change Background Image</button>
+<br><br>
+
+<button onclick="resetBackground()">Reset to Normal</button>
+
+<script>
+
+const originalColor = "white";
+const originalImage = "sea.jpg";
+
+function changeColor() {
+    document.body.style.backgroundImage = "";
+    document.body.style.backgroundColor = "blue";
+}
+
+function changeBackgroundImage() {
+    document.body.style.backgroundColor = "";
+    document.body.style.backgroundImage = "url('" + originalImage + "')";
+}
+
+function resetBackground() {
+    document.body.style.backgroundColor = originalColor;
+    document.body.style.backgroundImage = "";
+}
+
+</script>
+
+</body>
+</html>

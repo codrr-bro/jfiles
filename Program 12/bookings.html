@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:lightblue;">
+<h2 align = "center">BOOKING</h2>
+<form>
+Name:<br>
+<input type="text" name="name" required>
+<br><br>
+Email:<br>
+<input type="text" name="email">
+<br><br>
+Phone:<br> <input type="tel" name="phone" pattern="[6-9][0-9]{9}" maxlength="10" placeholder="Enter 10 digit number" required> <br><br>
+Check in Date:<br>
+<input type="date" name="date">
+<br><br>
+Check out Date:<br>
+<input type="date" name="date">
+<br><br>
+Number of guests:<br>
+<input type="text" name="number" required>
+<br><br>
+Room Type:<br>
+<select name="type">
+<option>Deluxe Room</option>
+<option>Family Room</option>
+<option>Suite</option>
+</select>
+<br><br>
+Gender:<br>
+<input type="radio" name="gender">Male
+<input type="radio" name="gender">Female
+<br><br>
+Facilities required:<br>
+<input type="checkbox">TV
+<input type="checkbox">WIFI
+<input type="checkbox">AC
+<br><br>
+Special requests:<br>
+<input type="text" name="request">
+<br><br>
+ID Proof:<br>
+<input type="file" name="file">
+<br><br>
+<input type="submit" value="Book Now">
+<input type="reset" value="reset">
+</form>
+<br>
+<a href="paradise.html">HOME</a>
+</body>
+</html>
